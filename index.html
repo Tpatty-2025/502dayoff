@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>五年二班｜請假須知</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:
+                "Noto Sans TC",
+                "Microsoft JhengHei",
+                sans-serif;
+
+            background: #f5f8f7;
+            color: #40515a;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           頁首
+        ========================= */
+
+        .header {
+            background: linear-gradient(135deg, #dcefeb, #eaf4f1);
+            padding: 55px 20px 50px;
+            text-align: center;
+            border-bottom-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+        }
+
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            color: #486b6b;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 17px;
+            color: #6b7f83;
+        }
+
+        .header .small-text {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #829295;
+        }
+
+        /* =========================
+           主要內容
+        ========================= */
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: 45px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 25px;
+            color: #526d70;
+            margin-bottom: 5px;
+        }
+
+        .section-title p {
+            font-size: 14px;
+            color: #8a999b;
+        }
+
+        /* =========================
+           請假方式
+        ========================= */
+
+        .leave-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 55px;
+        }
+
+        .leave-card {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 5px 18px rgba(80, 100, 100, 0.08);
+            border: 1px solid #e7eeee;
+            transition: 0.25s;
+        }
+
+        .leave-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(80, 100, 100, 0.12);
+        }
+
+        .leave-icon {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+
+        .leave-card h3 {
+            font-size: 23px;
+            color: #526d70;
+            margin-bottom: 12px;
+        }
+
+        .leave-card p {
+            color: #66777b;
+            font-size: 16px;
+        }
+
+        /* =========================
+           8點提醒
+        ========================= */
+
+        .time-box {
+            margin-top: 18px;
+            background: #fff4df;
+            border-radius: 18px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 14px;
+            color: #9a805b;
+        }
+
+        .time-box strong {
+            display: block;
+            font-size: 30px;
+            color: #d58b38;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           健康提醒
+        ========================= */
+
+        .health-box {
+            background: white;
+            border-radius: 28px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(80, 100, 100, 0.08);
+            margin-bottom: 55px;
+        }
+
+        .health-main {
+            background: #edf6f3;
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .health-main .big {
+            font-size: 25px;
+            font-weight: bold;
+            color: #527574;
+        }
+
+        .health-main p {
+            margin-top: 5px;
+            color: #718383;
+        }
+
+        /* =========================
+           疾病通報
+        ========================= */
+
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+            margin-bottom: 55px;
+        }
+
+        .disease-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid #e7eeee;
+            box-shadow: 0 4px 15px rgba(80, 100, 100, 0.06);
+            transition: 0.25s;
+        }
+
+        .disease-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .disease-icon {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        .disease-card h3 {
+            font-size: 18px;
+            color: #566e71;
+        }
+
+        /* =========================
+           通報提醒
+        ========================= */
+
+        .notice {
+            background: #fff8e9;
+            border-left: 5px solid #e6b866;
+            border-radius: 15px;
+            padding: 20px 25px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .notice strong {
+            color: #9a793f;
+        }
+
+        .notice p {
+            color: #756b5a;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           快速確認
+        ========================= */
+
+        .check-box {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 35px;
+            box-shadow: 0 5px 18px rgba(80, 100, 100, 0.08);
+            margin-bottom: 50px;
+        }
+
+        .check-list {
+            margin-top: 20px;
+        }
+
+        .check-item {
+            background: #f5f9f8;
+            border-radius: 15px;
+            padding: 14px 18px;
+            margin-bottom: 12px;
+            color: #596d70;
+            font-size: 16px;
+        }
+
+        .check-item span {
+            margin-right: 8px;
+        }
+
+        .check-item strong {
+            color: #4f696b;
+        }
+
+        /* =========================
+           頁尾
+        ========================= */
+
+        footer {
+            background: #dcefeb;
+            text-align: center;
+            padding: 30px 20px;
+            color: #668080;
+            font-size: 15px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        footer .heart {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           手機版
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+                padding: 40px 15px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+
+            .header h1 {
+                font-size: 27px;
+            }
+
+            .header p {
+                font-size: 15px;
+            }
+
+            .container {
+                width: 92%;
+                margin: 30px auto;
+            }
+
+            .leave-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .disease-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .health-box,
+            .check-box {
+                padding: 25px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .disease-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .disease-card {
+                padding: 20px 8px;
+            }
+
+            .disease-card h3 {
+                font-size: 16px;
+            }
+
+            .disease-icon {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         頁首
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-icon">🏫</div>
+
+        <h1>五年二班｜請假須知</h1>
+
+        <p>
+            孩子需要休息時，就讓他好好休息
+        </p>
+
+        <p class="small-text">
+            為了孩子的健康與班級防疫，請家長協助配合以下事項
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         主要內容
+    ========================= -->
+
+    <main class="container">
+
+
+        <!-- 請假方式 -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>📋 請假方式</h2>
+
+                <p>
+                    不同假別，請依照以下方式通知導師
+                </p>
+
+            </div>
+
+
+            <div class="leave-cards">
+
+
+                <!-- 事假 -->
+
+                <div class="leave-card">
+
+                    <div class="leave-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        事假
+                    </h3>
+
+                    <p>
+                        若孩子有家庭活動、出遊或其他事由需要請假，
+                        <strong>請提前向導師提出請假申請。</strong>
+                    </p>
+
+                </div>
+
+
+                <!-- 病假 -->
+
+                <div class="leave-card">
+
+                    <div class="leave-icon">
+                        🤒
+                    </div>
+
+                    <h3>
+                        病假
+                    </h3>
+
+                    <p>
+                        若孩子因身體不適需要請假，
+                        <strong>請於當天早上通知導師。</strong>
+                    </p>
+
+
+                    <div class="time-box">
+
+                        <span>
+                            病假通知時間
+                        </span>
+
+                        <strong>
+                            ⏰ 早上 8:00 前
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 健康提醒 -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>🌡️ 健康提醒</h2>
+
+                <p>
+                    身體不舒服時，休息也是一種照顧
+                </p>
+
+            </div>
+
+
+            <div class="health-box">
+
+                <div class="health-main">
+
+                    <div class="big">
+                        🤒 發燒或重感冒
+                    </div>
+
+                    <p>
+                        建議先在家休息，讓孩子充分恢復體力。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 疾病通報 -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>🚨 相關疾病通報</h2>
+
+                <p>
+                    若孩子經醫師診斷為以下疾病，請協助通知導師
+                </p>
+
+            </div>
+
+
+            <div class="disease-grid">
+
+
+                <div class="disease-card">
+
+                    <div class="disease-icon">
+                        🦠
+                    </div>
+
+                    <h3>
+                        腸病毒
+                    </h3>
+
+                </div>
+
+
+                <div class="disease-card">
+
+                    <div class="disease-icon">
+                        🤧
+                    </div>
+
+                    <h3>
+                        流感
+                    </h3>
+
+                </div>
+
+
+                <div class="disease-card">
+
+                    <div class="disease-icon">
+                        😷
+                    </div>
+
+                    <h3>
+                        新冠肺炎
+                    </h3>
+
+                </div>
+
+
+                <div class="disease-card">
+
+                    <div class="disease-icon">
+                        🤢
+                    </div>
+
+                    <h3>
+                        病毒性腸胃炎
+                    </h3>
+
+                </div>
+
+
+                <div class="disease-card">
+
+                    <div class="disease-icon">
+                        💧
+                    </div>
+
+                    <h3>
+                        水痘
+                    </h3>
+
+                </div>
+
+
+                <div class="disease-card">
+
+                    <div class="disease-icon">
+                        🦟
+                    </div>
+
+                    <h3>
+                        登革熱
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="notice">
+
+                <strong>
+                    📢 溫馨提醒
+                </strong>
+
+                <p>
+                    若孩子有上述相關疾病，請家長主動通知導師，
+                    以利班級健康管理與後續相關措施。
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 快速確認 -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>💡 請假前看這裡</h2>
+
+                <p>
+                    家長可以快速確認請假方式
+                </p>
+
+            </div>
+
+
+            <div class="check-box">
+
+                <div class="check-list">
+
+                    <div class="check-item">
+                        <span>☑️</span>
+                        <strong>事假</strong> → 請提前向導師請假
+                    </div>
+
+                    <div class="check-item">
+                        <span>☑️</span>
+                        <strong>病假</strong> → 請於當天早上 8:00 前通知導師
+                    </div>
+
+                    <div class="check-item">
+                        <span>☑️</span>
+                        <strong>發燒或重感冒</strong> → 建議在家休息
+                    </div>
+
+                    <div class="check-item">
+                        <span>☑️</span>
+                        <strong>相關疾病</strong> → 請主動通知導師
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         頁尾
+    ========================= -->
+
+    <footer>
+
+        <div class="heart">
+            💗
+        </div>
+
+        謝謝家長一起守護孩子的健康
+
+    </footer>
+
+
+</body>
+</html>
